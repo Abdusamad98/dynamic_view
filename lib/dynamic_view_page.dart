@@ -26,6 +26,7 @@ class DynamicViewPage extends StatelessWidget {
                 child: CircularProgressIndicator(),
               );
             } else if (state.status == FormzStatus.submissionSuccess) {
+
               List<InputModel> sendersContainer = state.dynamicFields
                   .where((element) => element.group == "SENDER")
                   .toList();
@@ -79,7 +80,7 @@ class DynamicViewPage extends StatelessWidget {
                 ],
               );
             } else
-              return Text("Error");
+              return const Text("Error");
           },
         ),
         floatingActionButton: FloatingActionButton(
